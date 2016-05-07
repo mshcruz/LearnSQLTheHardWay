@@ -13,8 +13,9 @@ UPDATE person SET first_name = "Zed"
 UPDATE pet SET dead = 1
 	WHERE id = 1;
 
-UPDATE pet SET name = "DECEASED"
-	WHERE dead = 1;
+UPDATE pet SET name = "DECEASED" WHERE id IN (
+	SELECT id FROM pet WHERE dead = 1
+);
 
 SELECT * FROM person;
 SELECT * FROM pet;
