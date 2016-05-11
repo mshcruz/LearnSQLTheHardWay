@@ -19,7 +19,8 @@ CREATE TABLE pet (
 	name TEXT,
 	breed TEXT,
 	age INTEGER,
-	dead INTEGER
+	dead INTEGER,
+	dob DATETIME
 );
 
 CREATE TABLE person_pet (
@@ -188,6 +189,6 @@ INSERT OR REPLACE INTO pet (id, name, breed, age, dead)
 SELECT * FROM pet;
 
 /* Exercise 12*/
-ALTER TABLE person ADD COLUMN height REAL;
+/*ALTER TABLE person ADD COLUMN height REAL;
 
-ALTER TABLE person ADD COLUMN weight REAL;
+ALTER TABLE person ADD COLUMN weight REAL;*/
